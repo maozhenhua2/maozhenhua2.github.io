@@ -26,9 +26,10 @@ __webpack_require__.r(__webpack_exports__);
 
 
 let url = function () {
-  let g = Object(_comm1_js__WEBPACK_IMPORTED_MODULE_5__["golaburl"])().full;
+  let g = Object(_comm1_js__WEBPACK_IMPORTED_MODULE_5__["golaburl"])();
   let u1 = '/cjatech/dist/';
-  let u2 = '/reactdist/';
+  // let u2 = '/reactdist/';
+  // console.log(g)
   return g.full && g.full.length ? u1 : '/';
 }();
 
@@ -100,13 +101,6 @@ const BasicExample = () => react__WEBPACK_IMPORTED_MODULE_0___default.a.createEl
     )
   })
 );
-
-const RouteWithSubRoutes = route => react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_3__["Route"], {
-  path: route.path,
-  render: props =>
-  // pass the sub-routes down to keep nesting
-  react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(route.component, props)
-});
 
 react_dom__WEBPACK_IMPORTED_MODULE_1___default.a.render(react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(BasicExample, null), document.querySelector('#root'));
 
@@ -12811,10 +12805,8 @@ exports.default = Route;
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "setDefFontSize", function() { return setDefFontSize; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "setMobileFontSize", function() { return setMobileFontSize; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "isMobile", function() { return isMobile; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "lazyImg", function() { return lazyImg; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "randomRange", function() { return randomRange; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "golaburl", function() { return golaburl; });
 function setDefFontSize() {
   // 设置文档默认字体大小
@@ -12896,15 +12888,15 @@ Date.prototype.format = function (fmt) {
 };
 
 function golaburl() {
-  let dev = true;
+  let dev = false;
   let fu = {
-    u1: 'http://maxmao2.byethost22.com/cjatech/dist/',
-    u2: 'https://maozhenhua2.github.io/reactdist/'
+    u1: '/cjatech/dist/'
+    // u2: '/reactdist/'
   };
 
   let ru = {
-    u1: '/cjatech/dist/',
-    u2: '/reactdist/'
+    u1: '/cjatech/dist/'
+    // u2: '/reactdist/'
   };
   return {
     full: dev ? '' : fu.u1,
@@ -12923,18 +12915,15 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Page1", function() { return Page1; });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(1);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(10);
-/* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react_dom__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _comm1_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(86);
-/* harmony import */ var _commComponent_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(88);
-/* harmony import */ var _header_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(89);
-/* harmony import */ var _Facelist_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(96);
-/* harmony import */ var _css_index_css__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(97);
-/* harmony import */ var _css_index_css__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(_css_index_css__WEBPACK_IMPORTED_MODULE_6__);
+/* harmony import */ var _commComponent_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(88);
+/* harmony import */ var _header_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(89);
+/* harmony import */ var _Facelist_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(96);
+/* harmony import */ var _css_index_css__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(97);
+/* harmony import */ var _css_index_css__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_css_index_css__WEBPACK_IMPORTED_MODULE_4__);
 
+// import ReactDOM from 'react-dom';
 
-
-
+// import {lazyImg} from './comm1.js';
 
 
 
@@ -12945,9 +12934,9 @@ __webpack_require__.r(__webpack_exports__);
 class Page1 extends react__WEBPACK_IMPORTED_MODULE_0___default.a.Component {
   render() {
     return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(
-      _commComponent_js__WEBPACK_IMPORTED_MODULE_3__["PagesContainer"],
+      _commComponent_js__WEBPACK_IMPORTED_MODULE_1__["PagesContainer"],
       { dataClass: 'wrapper' },
-      react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_header_js__WEBPACK_IMPORTED_MODULE_4__["Header"], null),
+      react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_header_js__WEBPACK_IMPORTED_MODULE_2__["Header"], null),
       react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Main, null)
     );
   }
@@ -12960,10 +12949,10 @@ class Main extends react__WEBPACK_IMPORTED_MODULE_0___default.a.Component {
 
   render() {
     return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(
-      _commComponent_js__WEBPACK_IMPORTED_MODULE_3__["MainContainer"],
+      _commComponent_js__WEBPACK_IMPORTED_MODULE_1__["MainContainer"],
       null,
-      react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Facelist_js__WEBPACK_IMPORTED_MODULE_5__["Btnbox"], null),
-      react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Facelist_js__WEBPACK_IMPORTED_MODULE_5__["Facelist"], null)
+      react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Facelist_js__WEBPACK_IMPORTED_MODULE_3__["Btnbox"], null),
+      react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Facelist_js__WEBPACK_IMPORTED_MODULE_3__["Facelist"], null)
     );
   }
 }
@@ -13075,13 +13064,15 @@ class Header extends react__WEBPACK_IMPORTED_MODULE_0___default.a.Component {
     //   _this.setState(data);
     // });
 
-    let unsubscribe = Object(_reduxs_js__WEBPACK_IMPORTED_MODULE_1__["getStateData"])(function (data) {
+    let store = _reduxs_js__WEBPACK_IMPORTED_MODULE_1__["getStore"]();
+
+    this.unsubscribe = _reduxs_js__WEBPACK_IMPORTED_MODULE_1__["getStateData"](store, function (data) {
       data.getHeaderData.value.then(data => {
         _this.setState(data);
       });
     });
 
-    _reduxs_js__WEBPACK_IMPORTED_MODULE_1__["store"].dispatch({ type: 'getHeaderData' });
+    store.dispatch({ type: 'getHeaderData' });
 
     this.state = {
       sale: 0,
@@ -13089,12 +13080,14 @@ class Header extends react__WEBPACK_IMPORTED_MODULE_0___default.a.Component {
     };
 
     this.logout = this.logout.bind(this);
-
-    unsubscribe();
   }
 
   logout() {
     console.log('logout');
+  }
+
+  componentWillUnmount() {
+    this.unsubscribe();
   }
 
   render() {
@@ -13159,7 +13152,7 @@ class Header extends react__WEBPACK_IMPORTED_MODULE_0___default.a.Component {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "store", function() { return store; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "getStore", function() { return getStore; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "getStateData", function() { return getStateData; });
 /* harmony import */ var redux__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(91);
 /* harmony import */ var _comm1_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(86);
@@ -13267,7 +13260,7 @@ const counter = Object(redux__WEBPACK_IMPORTED_MODULE_0__["combineReducers"])({
 //   }
 // }
 
-let store = Object(redux__WEBPACK_IMPORTED_MODULE_0__["createStore"])(counter);
+// let store = createStore(counter);
 
 // function getStateData(cb) {
 //   return store.subscribe(() => {
@@ -13293,7 +13286,9 @@ let store = Object(redux__WEBPACK_IMPORTED_MODULE_0__["createStore"])(counter);
 //   });
 // }
 
-const getStateData = cb => {
+const getStore = () => Object(redux__WEBPACK_IMPORTED_MODULE_0__["createStore"])(counter);
+
+const getStateData = (store, cb) => {
   return store.subscribe(() => {
     let stateData = store.getState();
     cb(stateData);
@@ -14032,6 +14027,9 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
+let storeLaym = _reduxs__WEBPACK_IMPORTED_MODULE_4__["getStore"]();
+let storeFilter = _reduxs__WEBPACK_IMPORTED_MODULE_4__["getStore"]();
+
 class Btnbox extends react__WEBPACK_IMPORTED_MODULE_0___default.a.Component {
   constructor(prop) {
     super(prop);
@@ -14042,22 +14040,22 @@ class Btnbox extends react__WEBPACK_IMPORTED_MODULE_0___default.a.Component {
   }
 
   check() {
-    _reduxs__WEBPACK_IMPORTED_MODULE_4__["store"].dispatch({ type: 'filter', filter: 1 });
+    storeFilter.dispatch({ type: 'filter', filter: 1 });
     // emitter.emit('filter', 1);
   }
 
   exclamation() {
-    _reduxs__WEBPACK_IMPORTED_MODULE_4__["store"].dispatch({ type: 'filter', filter: 2 });
+    storeFilter.dispatch({ type: 'filter', filter: 2 });
     // emitter.emit('filter', 2);
   }
 
   retweet() {
-    _reduxs__WEBPACK_IMPORTED_MODULE_4__["store"].dispatch({ type: 'filter', filter: 3 });
+    storeFilter.dispatch({ type: 'filter', filter: 3 });
     // emitter.emit('filter', 3);
   }
 
   users() {
-    _reduxs__WEBPACK_IMPORTED_MODULE_4__["store"].dispatch({ type: 'filter', filter: 4 });
+    storeFilter.dispatch({ type: 'filter', filter: 4 });
     // emitter.emit('filter', 4);
   }
 
@@ -14134,28 +14132,19 @@ class Facelist extends react__WEBPACK_IMPORTED_MODULE_0___default.a.Component {
       datas: []
     };
 
-    // let unsubscribe = store.subscribe(() => {
-    //   let stateData = store.getState();
-    //   stateData.getListData.value.then((data) => {
-    //     _this.setState(data);
-    //   })
-    // });
+    let store = _reduxs__WEBPACK_IMPORTED_MODULE_4__["getStore"]();
 
-    let unsubscribe = Object(_reduxs__WEBPACK_IMPORTED_MODULE_4__["getStateData"])(function (data) {
+    this.unsubscribe = _reduxs__WEBPACK_IMPORTED_MODULE_4__["getStateData"](store, function (data) {
       data.getListData.value.then(data => {
         _this.setState(data);
       });
     });
 
-    _reduxs__WEBPACK_IMPORTED_MODULE_4__["store"].dispatch({ type: 'getListData' });
+    store.dispatch({ type: 'getListData' });
+  }
 
-    // let unsubscribe = getStateData(function (data) {
-    //   _this.setState(data);
-    // });
-
-    // store.dispatch({type: 'getListData'});
-
-    unsubscribe();
+  componentWillUnmount() {
+    this.unsubscribe();
   }
 
   componentDidMount() {
@@ -14265,7 +14254,7 @@ class Box extends react__WEBPACK_IMPORTED_MODULE_0___default.a.Component {
     this.state.index = prop.index;
     let _this = this;
 
-    let unsubscribe = Object(_reduxs__WEBPACK_IMPORTED_MODULE_4__["getStateData"])(function (data) {
+    this.unsubscribe = _reduxs__WEBPACK_IMPORTED_MODULE_4__["getStateData"](storeFilter, function (data) {
       _this.filter(data.filter);
     });
 
@@ -14280,8 +14269,8 @@ class Box extends react__WEBPACK_IMPORTED_MODULE_0___default.a.Component {
 
   // 在组件从 DOM 中移除的时候立刻被调用。
   componentWillUnmount() {
-    console.log('unmonent');
     // emitter.removeListener('filter', this.filter);
+    this.unsubscribe();
   }
 
   render() {
@@ -14429,8 +14418,7 @@ class Withimg extends react__WEBPACK_IMPORTED_MODULE_0___default.a.Component {
       laym: laym
     });
 
-    _reduxs__WEBPACK_IMPORTED_MODULE_4__["store"].dispatch({ type: 'laym', laym: laym });
-    // store.dispatch({type: 'laym', laym: laym});
+    storeLaym.dispatch({ type: 'laym', laym: laym });
     // emitter.emit('layerpop', laym);
   }
 
@@ -14477,20 +14465,11 @@ class Pop extends react__WEBPACK_IMPORTED_MODULE_0___default.a.Component {
       });
     };
 
-    Object(_reduxs__WEBPACK_IMPORTED_MODULE_4__["getStateData"])(function (data) {
+    this.unsubscribe = _reduxs__WEBPACK_IMPORTED_MODULE_4__["getStateData"](storeLaym, function (data) {
       _this.setState({
         laym: data.laym
       });
     });
-
-    // let unsubscribe = getStateData(function (data) {
-    //   // console.log(data)
-    //   // console.log(data, 'laym');
-    //   _this.setState({
-    //     laym: data.laym
-    //   });
-    // });
-
 
     // this.eventEmitter = emitter.addListener('layerpop', (laym) => {
     //   this.setState({
@@ -14500,6 +14479,7 @@ class Pop extends react__WEBPACK_IMPORTED_MODULE_0___default.a.Component {
   }
 
   componentWillUnmount() {
+    this.unsubscribe();
     // emitter.removeListener(this.eventEmitter);
   }
 
@@ -14642,14 +14622,12 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Page2", function() { return Page2; });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(1);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(10);
-/* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react_dom__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _commComponent_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(88);
-/* harmony import */ var _css_index_css__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(97);
-/* harmony import */ var _css_index_css__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_css_index_css__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var _reduxs__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(90);
+/* harmony import */ var _commComponent_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(88);
+/* harmony import */ var _css_index_css__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(97);
+/* harmony import */ var _css_index_css__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_css_index_css__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _reduxs__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(90);
 
-
+// import ReactDOM from 'react-dom';
 
 
 // import {golaburl} from "./comm1.js";
@@ -14660,7 +14638,7 @@ __webpack_require__.r(__webpack_exports__);
 class Page2 extends react__WEBPACK_IMPORTED_MODULE_0___default.a.Component {
   render() {
     return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(
-      _commComponent_js__WEBPACK_IMPORTED_MODULE_2__["PagesContainer"],
+      _commComponent_js__WEBPACK_IMPORTED_MODULE_1__["PagesContainer"],
       { dataClass: 'wrapper' },
       react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Main, null)
     );
@@ -14674,7 +14652,7 @@ class Main extends react__WEBPACK_IMPORTED_MODULE_0___default.a.Component {
 
   render() {
     return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(
-      _commComponent_js__WEBPACK_IMPORTED_MODULE_2__["MainContainer"],
+      _commComponent_js__WEBPACK_IMPORTED_MODULE_1__["MainContainer"],
       null,
       react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(
         'div',
@@ -14809,17 +14787,22 @@ class Tr extends react__WEBPACK_IMPORTED_MODULE_0___default.a.Component {
     //   .then((response) => response.json())
     //   .then((data) => _this.setState(data));
 
-    let unsubscribe = Object(_reduxs__WEBPACK_IMPORTED_MODULE_4__["getStateData"])(function (data) {
+    let store = _reduxs__WEBPACK_IMPORTED_MODULE_3__["getStore"]();
+    this.unsubscribe = _reduxs__WEBPACK_IMPORTED_MODULE_3__["getStateData"](store, function (data) {
       data.getPage2Data.value.then(data => {
         _this.setState(data);
       });
     });
 
-    _reduxs__WEBPACK_IMPORTED_MODULE_4__["store"].dispatch({ type: 'getPage2Data' });
+    store.dispatch({ type: 'getPage2Data' });
 
     this.state = {
       datas: []
     };
+  }
+
+  componentWillUnmount() {
+    this.unsubscribe();
   }
 
   render() {
@@ -14829,7 +14812,7 @@ class Tr extends react__WEBPACK_IMPORTED_MODULE_0___default.a.Component {
       react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(
         'td',
         null,
-        react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_commComponent_js__WEBPACK_IMPORTED_MODULE_2__["Faces"], { url: v.url })
+        react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_commComponent_js__WEBPACK_IMPORTED_MODULE_1__["Faces"], { url: v.url })
       ),
       react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(
         'td',
@@ -14865,4 +14848,4 @@ class Tr extends react__WEBPACK_IMPORTED_MODULE_0___default.a.Component {
 
 /***/ })
 ]]);
-//# sourceMappingURL=../sourcemaps/js/vendor.js.map?hash=4562290702066ebc1fd7
+//# sourceMappingURL=../sourcemaps/js/vendor.js.map?hash=e47b14c1a33bec0e6606
